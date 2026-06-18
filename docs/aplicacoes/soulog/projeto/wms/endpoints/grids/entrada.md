@@ -4,8 +4,6 @@ title: WMS — Notas de Entradas
 
 ## WMS — Notas de Entradas
 
-[ Voltar](../README.md)
-
 > Endpoint GET existente para busca de entradas por período. O campo `uf` atualmente é extraído do XML no front-end — se possível, passar a retorná-lo diretamente na response para simplificar o consumo.
 
 ---

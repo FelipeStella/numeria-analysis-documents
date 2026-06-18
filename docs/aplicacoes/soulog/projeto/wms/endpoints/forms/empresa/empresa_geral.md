@@ -51,7 +51,7 @@ Disponibilizar ao front-end todas as informações exibidas na aba **Geral** do 
 
 #### Nova funcionalidade
 
-Criar um endpoint para atualização dos dados gerais da empresa.
+Criar um endpoint para atualização dos dados editáveis das informações gerais da empresa.
 
 ```http
 PUT /wms/Empresa/Geral/Edit/?clienteId=
