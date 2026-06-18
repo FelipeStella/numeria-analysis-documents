@@ -11,3 +11,7 @@ plugins:
   - search
   - awesome-pages
 
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
