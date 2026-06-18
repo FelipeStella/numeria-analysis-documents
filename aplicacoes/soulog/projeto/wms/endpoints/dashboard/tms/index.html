@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dashboard-wms" class="md-skip">
+        <a href="#endpoint" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -836,18 +836,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dashboard-wms" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dashboard WMS
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dashboard WMS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -874,8 +862,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#response" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -952,8 +940,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#observacoes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -961,11 +949,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1610,18 +1593,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dashboard-wms" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Dashboard WMS
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dashboard WMS">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1648,8 +1619,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#response" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1726,8 +1697,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#observacoes" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1735,11 +1706,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1956,15 +1922,14 @@
 
   <h1>Dashboard WMS</h1>
 
-<h2 id="dashboard-wms">Dashboard WMS</h2>
 <blockquote>
 <p>Endpoint unificado que retorna todos os dados necessários ao dashboard em uma única chamada, seguindo o mesmo padrão do dashboard de envio.</p>
 </blockquote>
 <hr />
-<h3 id="endpoint">Endpoint</h3>
+<h2 id="endpoint">Endpoint</h2>
 <pre><code class="language-http">GET /api/dashboard/wms
 </code></pre>
-<h4 id="query-params">Query params</h4>
+<h3 id="query-params">Query params</h3>
 <table>
 <thead>
 <tr>
@@ -1993,8 +1958,8 @@
 <pre><code class="language-http">GET /api/dashboard/wms?dtInicio=01-01-2025&amp;dtFim=31-01-2025
 </code></pre>
 <hr />
-<h3 id="response">Response</h3>
-<h4 id="estrutura-geral">Estrutura geral</h4>
+<h2 id="response">Response</h2>
+<h3 id="estrutura-geral">Estrutura geral</h3>
 <pre><code class="language-json">{
   &quot;kpis&quot;: { ... },
   &quot;salesOrdersSummary&quot;: { ... },
@@ -2002,7 +1967,7 @@
 }
 </code></pre>
 <hr />
-<h4 id="kpis"><code>kpis</code></h4>
+<h3 id="kpis"><code>kpis</code></h3>
 <p>Indicadores gerais exibidos nos cards do topo do dashboard.</p>
 <pre><code class="language-json">{
   &quot;kpis&quot;: {
@@ -2015,7 +1980,7 @@
 }
 </code></pre>
 <hr />
-<h4 id="salesorderssummary"><code>salesOrdersSummary</code></h4>
+<h3 id="salesorderssummary"><code>salesOrdersSummary</code></h3>
 <p>Totais por status para exibição nos cards de resumo.</p>
 <pre><code class="language-json">{
   &quot;salesOrdersSummary&quot;: {
@@ -2032,7 +1997,7 @@
 }
 </code></pre>
 <hr />
-<h4 id="salesorderschart"><code>salesOrdersChart</code></h4>
+<h3 id="salesorderschart"><code>salesOrdersChart</code></h3>
 <p>Série temporal por status para o gráfico de linha/barra, agrupada por hora.</p>
 <pre><code class="language-json">{
   &quot;salesOrdersChart&quot;: {
@@ -2050,7 +2015,7 @@
   }
 }
 </code></pre>
-<h5 id="campos-de-cada-item-em-groupdata">Campos de cada item em <code>groupData</code></h5>
+<h4 id="campos-de-cada-item-em-groupdata">Campos de cada item em <code>groupData</code></h4>
 <table>
 <thead>
 <tr>
@@ -2086,7 +2051,7 @@
 <p><strong>Labels:</strong> horários de <code>00h</code> até <code>22h</code> de duas em duas horas (12 pontos no eixo X).</p>
 </blockquote>
 <hr />
-<h3 id="observacoes">Observações</h3>
+<h2 id="observacoes">Observações</h2>
 <ul>
 <li><strong><code>salesOrdersSummary</code></strong> — totais consolidados, usados nos cards do dashboard</li>
 <li><strong><code>salesOrdersChart</code></strong> — dados para o gráfico, separados por hora e status</li>

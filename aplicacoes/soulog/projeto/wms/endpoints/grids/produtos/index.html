@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wms-produto-movimentacao-do-estoque" class="md-skip">
+        <a href="#endpoint" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -1281,18 +1281,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wms-produto-movimentacao-do-estoque" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WMS — Produto - Movimentação do estoque
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WMS — Produto - Movimentação do estoque">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1345,11 +1333,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1554,18 +1537,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wms-produto-movimentacao-do-estoque" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WMS — Produto - Movimentação do estoque
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WMS — Produto - Movimentação do estoque">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1618,11 +1589,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1844,15 +1810,14 @@
 
   <h1>WMS — Produto - Movimentação do estoque</h1>
 
-<h2 id="wms-produto-movimentacao-do-estoque">WMS — Produto - Movimentação do estoque</h2>
 <blockquote>
 <p>Correção necessária na funcionalidade de visualização da DANFE de saída disponível na grid de movimentação de estoque acessada através das ações da grid de pedidos.</p>
 </blockquote>
 <hr />
-<h3 id="endpoint">Endpoint</h3>
+<h2 id="endpoint">Endpoint</h2>
 <pre><code class="language-http">GET /wms/Estoque/XmlDanfeSaida?chaveNF=
 </code></pre>
-<h4 id="problema-identificado">Problema identificado</h4>
+<h3 id="problema-identificado">Problema identificado</h3>
 <p>Na grid de movimentação do estoque existe uma funcionalidade para exibição da DANFE.</p>
 <p>Atualmente:</p>
 <ul>
@@ -1862,7 +1827,7 @@
 <p>Ao consultar o endpoint de DANFE de saída, independentemente da chave informada, a resposta retornada é uma página HTML contendo a mensagem:</p>
 <pre><code class="language-text">Nota fiscal não encontrada ou URL inválida/expirada.
 </code></pre>
-<h4 id="resultado-atual">Resultado atual</h4>
+<h3 id="resultado-atual">Resultado atual</h3>
 <p>O endpoint retorna um conteúdo HTML semelhante ao seguinte:</p>
 <pre><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -1871,9 +1836,9 @@
 ...
 &lt;/html&gt;
 </code></pre>
-<h4 id="resultado-esperado">Resultado esperado</h4>
+<h3 id="resultado-esperado">Resultado esperado</h3>
 <p>O endpoint deve retornar corretamente o XML ou o conteúdo da DANFE correspondente à chave da NF-e informada, da mesma forma que já ocorre na funcionalidade de DANFE de entrada.</p>
-<h4 id="objetivo">Objetivo</h4>
+<h3 id="objetivo">Objetivo</h3>
 <p>Restabelecer o funcionamento da visualização da DANFE de saída para que os usuários possam consultar os documentos fiscais diretamente pela grid de movimentação de estoque.</p>
 <hr />
 

@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wms-notas-de-entradas" class="md-skip">
+        <a href="#endpoint" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -1225,18 +1225,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wms-notas-de-entradas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WMS — Notas de Entradas
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WMS — Notas de Entradas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1263,8 +1251,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#endpoint-excluir-registro" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1295,11 +1283,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1560,18 +1543,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wms-notas-de-entradas" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WMS — Notas de Entradas
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WMS — Notas de Entradas">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1598,8 +1569,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#endpoint-excluir-registro" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1630,11 +1601,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1856,20 +1822,19 @@
 
   <h1>WMS — Notas de Entradas</h1>
 
-<h2 id="wms-notas-de-entradas">WMS — Notas de Entradas</h2>
 <blockquote>
 <p>Endpoint GET existente para busca de entradas por período. O campo <code>uf</code> atualmente é extraído do XML no front-end — se possível, passar a retorná-lo diretamente na response para simplificar o consumo.</p>
 </blockquote>
 <hr />
-<h3 id="endpoint">Endpoint</h3>
+<h2 id="endpoint">Endpoint</h2>
 <pre><code class="language-http">GET /wms/Portal/Entrada/BuscarEntradas
 </code></pre>
-<h4 id="melhoria-sugerida">Melhoria sugerida</h4>
+<h3 id="melhoria-sugerida">Melhoria sugerida</h3>
 <p>O campo <code>uf</code> hoje é resolvido no front-end via leitura do XML da NF-e.</p>
 <p>Propõe-se que o backend passe a retorná-lo diretamente na response.</p>
 <hr />
-<h3 id="endpoint-excluir-registro">Endpoint excluir registro</h3>
-<h4 id="nova-funcionalidade">Nova funcionalidade</h4>
+<h2 id="endpoint-excluir-registro">Endpoint excluir registro</h2>
+<h3 id="nova-funcionalidade">Nova funcionalidade</h3>
 <p>Implementar um endpoint para exclusão de registros de nota de entrada através do identificador da nota.</p>
 <p>Exemplo:</p>
 <pre><code class="language-http">DELETE /wms/Portal/Entrada/{id}
@@ -1877,7 +1842,7 @@
 <p>ou</p>
 <pre><code class="language-http">DELETE /wms/Portal/Entrada/Excluir?id={id}
 </code></pre>
-<h4 id="objetivo">Objetivo</h4>
+<h3 id="objetivo">Objetivo</h3>
 <p>Permitir que o front-end realize a exclusão de uma nota de entrada informando apenas o ID do registro, sem necessidade de operações adicionais ou manipulações diretas na base de dados.</p>
 <hr />
 

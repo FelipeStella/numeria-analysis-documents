@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wms-integracoes" class="md-skip">
+        <a href="#endpoint" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -925,18 +925,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wms-integracoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WMS — Integrações
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WMS — Integrações">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -963,8 +951,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#novo-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1002,8 +990,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#endpoint-de-edicao" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1045,11 +1033,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1610,18 +1593,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wms-integracoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WMS — Integrações
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WMS — Integrações">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1648,8 +1619,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#novo-endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1687,8 +1658,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#endpoint-de-edicao" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1730,11 +1701,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1956,15 +1922,14 @@
 
   <h1>WMS — Integrações</h1>
 
-<h2 id="wms-integracoes">WMS — Integrações</h2>
 <blockquote>
 <p>Ajustes e novos endpoints para gerenciamento das configurações de integração dos canais de venda.</p>
 </blockquote>
 <hr />
-<h3 id="endpoint">Endpoint</h3>
+<h2 id="endpoint">Endpoint</h2>
 <pre><code class="language-http">GET /wms/B2B/ListaCanalVenda?clienteId=
 </code></pre>
-<h4 id="melhoria-sugerida">Melhoria sugerida</h4>
+<h3 id="melhoria-sugerida">Melhoria sugerida</h3>
 <p>Adicionar as seguintes informações ao JSON de resposta do endpoint:</p>
 <ul>
 <li><code>horaVenda</code></li>
@@ -1973,10 +1938,10 @@
 </ul>
 <p>Alternativamente, criar um novo endpoint específico para consulta das integrações.</p>
 <hr />
-<h3 id="novo-endpoint">Novo Endpoint</h3>
+<h2 id="novo-endpoint">Novo Endpoint</h2>
 <pre><code class="language-http">GET /wms/Integracoes?clienteId=
 </code></pre>
-<h4 id="response">Response</h4>
+<h3 id="response">Response</h3>
 <pre><code class="language-json">{
   &quot;IdIntegracao&quot;: &quot;number&quot;,
   &quot;idCanalVenda&quot;: &quot;number&quot;,
@@ -1986,15 +1951,15 @@
   &quot;horaExpedicao&quot;: &quot;timestamp&quot;
 }
 </code></pre>
-<h4 id="objetivo">Objetivo</h4>
+<h3 id="objetivo">Objetivo</h3>
 <p>Disponibilizar ao front-end as configurações de horários utilizadas pelas integrações de cada canal de venda, sem necessidade de consultas adicionais.</p>
 <hr />
-<h3 id="endpoint-de-edicao">Endpoint de edição</h3>
-<h4 id="nova-funcionalidade">Nova funcionalidade</h4>
+<h2 id="endpoint-de-edicao">Endpoint de edição</h2>
+<h3 id="nova-funcionalidade">Nova funcionalidade</h3>
 <p>Criar um endpoint para atualização das configurações de integração.</p>
 <pre><code class="language-http">PUT /wms/Integracoes/Edit
 </code></pre>
-<h4 id="payload">Payload</h4>
+<h3 id="payload">Payload</h3>
 <pre><code class="language-json">{
   &quot;idIntegracao&quot;: &quot;number&quot;,
   &quot;idCanalVenda&quot;: &quot;number&quot;,
@@ -2003,7 +1968,7 @@
   &quot;horaExpedicao&quot;: &quot;timestamp&quot;
 }
 </code></pre>
-<h4 id="objetivo-edicao-integracao">Objetivo edição integração</h4>
+<h3 id="objetivo-edicao-integracao">Objetivo edição integração</h3>
 <p>Permitir que o front-end atualize os horários de venda, postagem e expedição associados a uma integração, mantendo as configurações sincronizadas com os canais de venda cadastrados.</p>
 <hr />
 

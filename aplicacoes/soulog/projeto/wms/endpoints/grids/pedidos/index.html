@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wms-pedidos" class="md-skip">
+        <a href="#endpoint" class="md-skip">
           Pular para conteúdo
         </a>
       
@@ -1253,18 +1253,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wms-pedidos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WMS — Pedidos
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WMS — Pedidos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1291,8 +1279,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#endpoint-canal-venda" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1319,8 +1307,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#endpoint-excluir-registro" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1351,11 +1339,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1588,18 +1571,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#wms-pedidos" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        WMS — Pedidos
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WMS — Pedidos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#endpoint" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1626,8 +1597,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#endpoint-canal-venda" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1654,8 +1625,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#endpoint-excluir-registro" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1686,11 +1657,6 @@
       
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1912,22 +1878,21 @@
 
   <h1>WMS — Pedidos</h1>
 
-<h2 id="wms-pedidos">WMS — Pedidos</h2>
 <blockquote>
 <p>Ajustes sugeridos para os endpoints relacionados a pedidos e canais de venda, visando simplificar o consumo das APIs pelo front-end.</p>
 </blockquote>
 <hr />
-<h3 id="endpoint">Endpoint</h3>
+<h2 id="endpoint">Endpoint</h2>
 <pre><code class="language-http">GET /wms/Portal/Pedido/BuscaPedidosSeparacaoClienteId?clienteId=
 </code></pre>
-<h4 id="melhoria-sugerida">Melhoria sugerida</h4>
+<h3 id="melhoria-sugerida">Melhoria sugerida</h3>
 <p>Adicionar o campo <code>nomeCliente</code> no JSON de resposta do endpoint.</p>
 <p>Atualmente, o front-end não exibe essa informação na grid.</p>
 <hr />
-<h3 id="endpoint-canal-venda">Endpoint canal venda</h3>
+<h2 id="endpoint-canal-venda">Endpoint canal venda</h2>
 <pre><code class="language-http">GET /wms/B2B/ListaCanalVenda?clienteId=
 </code></pre>
-<h4 id="melhoria-sugerida-canal-venda">Melhoria sugerida canal venda</h4>
+<h3 id="melhoria-sugerida-canal-venda">Melhoria sugerida canal venda</h3>
 <p>Permitir a listagem dos canais de venda sem a obrigatoriedade de informar o parâmetro <code>clienteId</code>.</p>
 <p>Alternativas:</p>
 <ul>
@@ -1941,8 +1906,8 @@
 <pre><code class="language-http">GET /wms/ListaCanaisVenda
 </code></pre>
 <p>Dessa forma, o front-end poderá carregar a lista de canais de venda independentemente da seleção prévia de um cliente.</p>
-<h3 id="endpoint-excluir-registro">Endpoint excluir registro</h3>
-<h4 id="nova-funcionalidade">Nova funcionalidade</h4>
+<h2 id="endpoint-excluir-registro">Endpoint excluir registro</h2>
+<h3 id="nova-funcionalidade">Nova funcionalidade</h3>
 <p>Implementar um endpoint para exclusão de registros de pedidos através do identificador da nota.</p>
 <p>Exemplo:</p>
 <pre><code class="language-http">DELETE /wms/Portal/Pedido/{id}
@@ -1950,7 +1915,7 @@
 <p>ou</p>
 <pre><code class="language-http">DELETE /wms/Portal/Pedido/Excluir?id={id}
 </code></pre>
-<h4 id="objetivo">Objetivo</h4>
+<h3 id="objetivo">Objetivo</h3>
 <p>Permitir que o front-end realize a exclusão de um pedido informando apenas o ID do registro, sem necessidade de operações adicionais ou manipulações diretas na base de dados.</p>
 <hr />
 
