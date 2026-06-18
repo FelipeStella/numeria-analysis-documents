@@ -1,7 +1,5 @@
 ---
 title: Eventos de Comarca de Origem
-parent: Gestão de Movimentações
-nav_order: 1
 ---
 
 ## Comarca de Origem
@@ -18,7 +16,7 @@ Criar uma fonte alternativa de dados (`RheEventoComarcaOrigem`) para suprir a co
 
 ### Fonte de dados
 
-Os dados para popular `RheEventoComarcaOrigem` virão da planilha [Comarcas a corrigir SIGEP.xlsx](<../../../../anexos/Comarcas a corrigir SIGEP.xlsx>).
+Os dados para popular `RheEventoComarcaOrigem` virão da planilha [Comarcas a corrigir SIGEP.xlsx](<./anexos/Comarcas a corrigir SIGEP.xlsx>).
 
 ### Estrutura de dados
 
@@ -55,3 +53,7 @@ Ao calcular o tempo de serviço na comarca atual para eventos de cargo `'CARGO E
 #### 2. `SharedService.GetComarcaOrigemAsync`
 
 Quando a comarca de origem não puder ser determinada pelo evento da carga, buscar o valor de `NoComarcaOrigem` em `RheEventoComarcaOrigem` (por `NrFuncional` + `NrVinculo`) como fallback.
+
+### Tempo estimado
+
+> 3 dias
