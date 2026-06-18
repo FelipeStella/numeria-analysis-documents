@@ -1,0 +1,18 @@
+title: Documentação de Análise
+description: Documentação técnica de análises e regras de negócio
+remote_theme: just-the-docs/just-the-docs
+
+color_scheme: light
+
+search_enabled: true
+heading_anchors: true
+
+nav_sort: case_insensitive
+
+callouts:
+  warning:
+    title: Atenção
+    color: red
+  note:
+    title: Nota
+    color: blue
