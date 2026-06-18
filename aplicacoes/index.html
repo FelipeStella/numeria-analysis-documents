@@ -7,14 +7,14 @@
         
         
         
-        <link rel="shortcut icon" href="../../../../img/favicon.ico">
-        <title>Eventos de Comarca de Origem - My Docs</title>
-        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../../../css/brands.min.css" rel="stylesheet">
-        <link href="../../../../css/solid.min.css" rel="stylesheet">
-        <link href="../../../../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../../../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Aplicações - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
@@ -24,7 +24,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="../../../..">My Docs</a>
+                <a class="navbar-brand" href="..">My Docs</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,16 +35,20 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="../../../.." class="nav-link">Home</a>
+                                <a href=".." class="nav-link">Home</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Gestao movimentacoes</a>
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Aplicacoes</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../" class="dropdown-item">Gestão de Movimentações</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Aplicações</a>
 </li>
                                     
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Gestao movimentacoes</a>
+    <ul class="dropdown-menu">
+            
   <li class="dropdown-submenu">
     <a href="#" class="dropdown-item">Release 2</a>
     <ul class="dropdown-menu">
@@ -54,8 +58,10 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Eventos de Comarca de Origem</a>
+    <a href="gestao-movimentacoes/release-2/etapa-4/comarca_origem/" class="dropdown-item">Eventos de Comarca de Origem</a>
 </li>
+    </ul>
+  </li>
     </ul>
   </li>
     </ul>
@@ -71,12 +77,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../../" class="nav-link">
+                                <a rel="prev" href=".." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="gestao-movimentacoes/release-2/etapa-4/comarca_origem/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -97,86 +103,12 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
-            
-            <li class="nav-item" data-bs-level="2"><a href="#comarca-de-origem" class="nav-link">Comarca de Origem</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
         </ul>
     </div>
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="comarca-de-origem">Comarca de Origem</h2>
-<blockquote>
-<p>Release 2 · Etapa 4</p>
-</blockquote>
-<h3 id="contexto">Contexto</h3>
-<p>Servidores removidos temporariamente podem ter sua comarca de origem definida por um evento específico na carga de dados. Quando esse evento não está presente na carga, a comarca de origem (e o respectivo tempo de serviço na comarca atual) não pode ser calculada corretamente pela regra atual.</p>
-<h3 id="objetivo">Objetivo</h3>
-<p>Criar uma fonte alternativa de dados (<code>RheEventoComarcaOrigem</code>) para suprir a comarca de origem e o início das atividades nos casos em que o evento de origem não está presente na carga, ajustando as regras de negócio que dependem dessa informação.</p>
-<h3 id="fonte-de-dados">Fonte de dados</h3>
-<p>Os dados para popular <code>RheEventoComarcaOrigem</code> virão da planilha <a href="../../../../anexos/Comarcas a corrigir SIGEP.xlsx">Comarcas a corrigir SIGEP.xlsx</a>.</p>
-<h3 id="estrutura-de-dados">Estrutura de dados</h3>
-<h4 id="nova-tabela-rheeventocomarcaorigem">Nova tabela: <code>RheEventoComarcaOrigem</code></h4>
-<table>
-<thead>
-<tr>
-<th>Campo</th>
-<th>Tipo</th>
-<th>Descrição</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>IdRheEventoComarcaOrigem</td>
-<td>number</td>
-<td>Identificador único do registro (chave primária).</td>
-</tr>
-<tr>
-<td>NrFuncional</td>
-<td>string</td>
-<td>Número funcional do servidor.</td>
-</tr>
-<tr>
-<td>NrVinculo</td>
-<td>number</td>
-<td>Número do vínculo do servidor.</td>
-</tr>
-<tr>
-<td>NoServidor</td>
-<td>string</td>
-<td>Nome do servidor.</td>
-</tr>
-<tr>
-<td>NoComarcaOrigem</td>
-<td>string</td>
-<td>Nome da comarca de origem do servidor.</td>
-</tr>
-<tr>
-<td>DtInicioAtividades</td>
-<td>date</td>
-<td>Data de início das atividades na comarca de origem.</td>
-</tr>
-</tbody>
-</table>
-<blockquote>
-<p><code>NrFuncional</code> + <code>NrVinculo</code> identificam o servidor/vínculo ao qual o registro se refere.</p>
-</blockquote>
-<pre><code class="language-json">{
-  &quot;IdRheEventoComarcaOrigem&quot;: &quot;number&quot;,
-  &quot;NrFuncional&quot;: &quot;string&quot;,
-  &quot;NrVinculo&quot;: &quot;number&quot;,
-  &quot;NoServidor&quot;: &quot;string&quot;,
-  &quot;NoComarcaOrigem&quot;: &quot;string&quot;,
-  &quot;DtInicioAtividades&quot;: &quot;date&quot;
-}
-</code></pre>
-<h3 id="modificacoes-necessarias">Modificações necessárias</h3>
-<h4 id="1-rhetjservicegettemposervicocomarcaatualasync">1. <code>RheTJService.GetTempoServicoComarcaAtualAsync</code></h4>
-<p>Ao calcular o tempo de serviço na comarca atual para eventos de cargo <code>'CARGO EFETIVO'</code>, buscar também o registro correspondente em <code>RheEventoComarcaOrigem</code> (por <code>NrFuncional</code> + <code>NrVinculo</code>) e considerar <code>DtInicioAtividades</code> como ponto de partida do cálculo quando o evento de origem não estiver presente na carga.</p>
-<h4 id="2-sharedservicegetcomarcaorigemasync">2. <code>SharedService.GetComarcaOrigemAsync</code></h4>
-<p>Quando a comarca de origem não puder ser determinada pelo evento da carga, buscar o valor de <code>NoComarcaOrigem</code> em <code>RheEventoComarcaOrigem</code> (por <code>NrFuncional</code> + <code>NrVinculo</code>) como fallback.</p></div>
+</div>
             </div>
         </div>
 
@@ -184,13 +116,13 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="../../../../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
-            var base_url = "../../../..",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../../js/base.js"></script>
-        <script src="../../../../search/main.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
