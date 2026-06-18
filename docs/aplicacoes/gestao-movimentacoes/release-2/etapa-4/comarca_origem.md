@@ -22,14 +22,14 @@ Os dados para popular `RheEventoComarcaOrigem` virão da planilha [Comarcas a co
 
 #### Nova tabela: `RheEventoComarcaOrigem`
 
-| Campo                    | Tipo     | Descrição                                                               |
-|--------------------------|----------|-------------------------------------------------------------------------|
-| IdRheEventoComarcaOrigem | number   | Identificador único do registro (chave primária).                       |
-| NrFuncional              | string   | Número funcional do servidor.                                           |
-| NrVinculo                | number   | Número do vínculo do servidor.                                          |
-| NoServidor               | string   | Nome do servidor.                                                       |
-| NoComarcaOrigem          | string   | Nome da comarca de origem do servidor.                                  |
-| DtInicioAtividades       | date     | Data de início das atividades na comarca de origem.                     |
+| Campo                    | Tipo   | Descrição                                           |
+| ------------------------ | ------ | --------------------------------------------------- |
+| IdRheEventoComarcaOrigem | number | Identificador único do registro (chave primária).   |
+| NrFuncional              | string | Número funcional do servidor.                       |
+| NrVinculo                | number | Número do vínculo do servidor.                      |
+| NoServidor               | string | Nome do servidor.                                   |
+| NoComarcaOrigem          | string | Nome da comarca de origem do servidor.              |
+| DtInicioAtividades       | date   | Data de início das atividades na comarca de origem. |
 
 > `NrFuncional` + `NrVinculo` identificam o servidor/vínculo ao qual o registro se refere.
 
