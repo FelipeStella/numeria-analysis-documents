@@ -2,11 +2,9 @@
 title: Soulog
 ---
 
-## Soulog
-
 Documentação de análise do projeto Soulog.
 
-## Conteúdo
+## Análise de endpoints
 
 - [Dashboard TMS](./projeto/wms/endpoints/dashboard/tms.md)
 - [Formulários de empresa](./projeto/wms/endpoints/forms/empresa/empresa_geral.md)

@@ -2,19 +2,17 @@
 title: WMS — Integrações
 ---
 
-## WMS — Integrações
-
 > Ajustes e novos endpoints para gerenciamento das configurações de integração dos canais de venda.
 
 ---
 
-### Endpoint
+## Endpoint
 
 ```http
 GET /wms/B2B/ListaCanalVenda?clienteId=
 ```
 
-#### Melhoria sugerida
+### Melhoria sugerida
 
 Adicionar as seguintes informações ao JSON de resposta do endpoint:
 
@@ -26,13 +24,13 @@ Alternativamente, criar um novo endpoint específico para consulta das integraç
 
 ---
 
-### Novo Endpoint
+## Novo Endpoint
 
 ```http
 GET /wms/Integracoes?clienteId=
 ```
 
-#### Response
+### Response
 
 ```json
 {
@@ -45,15 +43,15 @@ GET /wms/Integracoes?clienteId=
 }
 ```
 
-#### Objetivo
+### Objetivo
 
 Disponibilizar ao front-end as configurações de horários utilizadas pelas integrações de cada canal de venda, sem necessidade de consultas adicionais.
 
 ---
 
-### Endpoint de edição
+## Endpoint de edição
 
-#### Nova funcionalidade
+### Nova funcionalidade
 
 Criar um endpoint para atualização das configurações de integração.
 
@@ -61,7 +59,7 @@ Criar um endpoint para atualização das configurações de integração.
 PUT /wms/Integracoes/Edit
 ```
 
-#### Payload
+### Payload
 
 ```json
 {
@@ -73,7 +71,7 @@ PUT /wms/Integracoes/Edit
 }
 ```
 
-#### Objetivo edição integração
+### Objetivo edição integração
 
 Permitir que o front-end atualize os horários de venda, postagem e expedição associados a uma integração, mantendo as configurações sincronizadas com os canais de venda cadastrados.
 

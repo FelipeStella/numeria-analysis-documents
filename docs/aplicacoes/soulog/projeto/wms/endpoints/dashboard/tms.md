@@ -2,19 +2,17 @@
 title: Dashboard WMS
 ---
 
-## Dashboard WMS
-
 > Endpoint unificado que retorna todos os dados necessários ao dashboard em uma única chamada, seguindo o mesmo padrão do dashboard de envio.
 
 ---
 
-### Endpoint
+## Endpoint
 
 ```http
 GET /api/dashboard/wms
 ```
 
-#### Query params
+### Query params
 
 | Parâmetro  | Tipo     | Formato      | Obrigatório |
 | ---------- | -------- | ------------ | ----------- |
@@ -29,9 +27,9 @@ GET /api/dashboard/wms?dtInicio=01-01-2025&dtFim=31-01-2025
 
 ---
 
-### Response
+## Response
 
-#### Estrutura geral
+### Estrutura geral
 
 ```json
 {
@@ -43,7 +41,7 @@ GET /api/dashboard/wms?dtInicio=01-01-2025&dtFim=31-01-2025
 
 ---
 
-#### `kpis`
+### `kpis`
 
 Indicadores gerais exibidos nos cards do topo do dashboard.
 
@@ -61,7 +59,7 @@ Indicadores gerais exibidos nos cards do topo do dashboard.
 
 ---
 
-#### `salesOrdersSummary`
+### `salesOrdersSummary`
 
 Totais por status para exibição nos cards de resumo.
 
@@ -83,7 +81,7 @@ Totais por status para exibição nos cards de resumo.
 
 ---
 
-#### `salesOrdersChart`
+### `salesOrdersChart`
 
 Série temporal por status para o gráfico de linha/barra, agrupada por hora.
 
@@ -105,7 +103,7 @@ Série temporal por status para o gráfico de linha/barra, agrupada por hora.
 }
 ```
 
-##### Campos de cada item em `groupData`
+#### Campos de cada item em `groupData`
 
 | Campo        | Tipo     | Descrição                       |
 | ------------ | -------- | ------------------------------- |
@@ -118,7 +116,7 @@ Série temporal por status para o gráfico de linha/barra, agrupada por hora.
 
 ---
 
-### Observações
+## Observações
 
 - **`salesOrdersSummary`** — totais consolidados, usados nos cards do dashboard
 - **`salesOrdersChart`** — dados para o gráfico, separados por hora e status

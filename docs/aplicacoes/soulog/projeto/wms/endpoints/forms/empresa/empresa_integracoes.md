@@ -2,27 +2,25 @@
 title: WMS — Empresa - Aba Integrações
 ---
 
-## WMS — Empresa - Aba Integrações
-
 > Criar endpoints para busca e atualização dos dados de integração vinculados à empresa.
 
 ---
 
-### Endpoint
+## Endpoint
 
-#### Busca
+### Busca
 
 ```http
 GET /wms/Empresa/ServicosBling/?clienteId=
 ```
 
-#### Atualização
+### Atualização
 
 ```http
 GET /wms/Empresa/ServicosBling/update/?clienteId=
 ```
 
-#### Response Busca
+### Response Busca
 
 ```json
 {
@@ -35,7 +33,7 @@ GET /wms/Empresa/ServicosBling/update/?clienteId=
 }
 ```
 
-#### Payload Atualização dos dados
+### Payload Atualização dos dados
 
 ```json
 {
@@ -48,7 +46,7 @@ GET /wms/Empresa/ServicosBling/update/?clienteId=
 }
 ```
 
-#### Objetivo
+### Objetivo
 
 Disponibilizar ao front-end todas as informações exibidas na aba **Integrações** do cadastro da empresa através de um único endpoint.
 

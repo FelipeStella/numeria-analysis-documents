@@ -2,19 +2,17 @@
 title: WMS — Pedidos
 ---
 
-## WMS — Pedidos
-
 > Ajustes sugeridos para os endpoints relacionados a pedidos e canais de venda, visando simplificar o consumo das APIs pelo front-end.
 
 ---
 
-### Endpoint
+## Endpoint
 
 ```http
 GET /wms/Portal/Pedido/BuscaPedidosSeparacaoClienteId?clienteId=
 ```
 
-#### Melhoria sugerida
+### Melhoria sugerida
 
 Adicionar o campo `nomeCliente` no JSON de resposta do endpoint.
 
@@ -22,13 +20,13 @@ Atualmente, o front-end não exibe essa informação na grid.
 
 ---
 
-### Endpoint canal venda
+## Endpoint canal venda
 
 ```http
 GET /wms/B2B/ListaCanalVenda?clienteId=
 ```
 
-#### Melhoria sugerida canal venda
+### Melhoria sugerida canal venda
 
 Permitir a listagem dos canais de venda sem a obrigatoriedade de informar o parâmetro `clienteId`.
 
@@ -51,9 +49,9 @@ GET /wms/ListaCanaisVenda
 
 Dessa forma, o front-end poderá carregar a lista de canais de venda independentemente da seleção prévia de um cliente.
 
-### Endpoint excluir registro
+## Endpoint excluir registro
 
-#### Nova funcionalidade
+### Nova funcionalidade
 
 Implementar um endpoint para exclusão de registros de pedidos através do identificador da nota.
 
@@ -69,7 +67,7 @@ ou
 DELETE /wms/Portal/Pedido/Excluir?id={id}
 ```
 
-#### Objetivo
+### Objetivo
 
 Permitir que o front-end realize a exclusão de um pedido informando apenas o ID do registro, sem necessidade de operações adicionais ou manipulações diretas na base de dados.
 

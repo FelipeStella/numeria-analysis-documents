@@ -2,19 +2,17 @@
 title: WMS — Empresa - Aba Alterar Senha
 ---
 
-## WMS — Empresa - Aba Alterar Senha
-
 > Criar endpoint para atualizar a senha de acesso ao módulo WMS.
 
 ---
 
-### Endpoint
+## Endpoint
 
 ```http
 GET /wms/Empresa/Senha/Update?clienteId=
 ```
 
-#### Payload
+### Payload
 
 ```json
 {
@@ -26,7 +24,7 @@ GET /wms/Empresa/Senha/Update?clienteId=
 
 > Os dados precisam estar mascarados
 
-#### Objetivo
+### Objetivo
 
 Permitir que o front-end atualize a senha da empresa utilizada no acesso ao sistema.
 

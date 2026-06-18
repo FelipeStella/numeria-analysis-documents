@@ -2,27 +2,25 @@
 title: WMS — Empresa - Aba Serviços
 ---
 
-## WMS — Empresa - Aba Serviços
-
 > Criação de endpoints para listagem e atualização dos serviços do bling vinculados à empresa.
 
 ---
 
-### Endpoint
+## Endpoint
 
-#### Busca
+### Busca
 
 ```http
 GET /wms/Empresa/ServicosBling/?clienteId=
 ```
 
-#### Atualização
+### Atualização
 
 ```http
 GET /wms/Empresa/ServicosBling/update/?clienteId=
 ```
 
-#### Response Busca
+### Response Busca
 
 ```json
 [
@@ -33,7 +31,7 @@ GET /wms/Empresa/ServicosBling/update/?clienteId=
 ]
 ```
 
-#### Payload Atualização dos dados
+### Payload Atualização dos dados
 
 ```json
 [
@@ -44,7 +42,7 @@ GET /wms/Empresa/ServicosBling/update/?clienteId=
 ]
 ```
 
-#### Objetivo
+### Objetivo
 
 Disponibilizar ao front-end todas as informações exibidas na aba **Serviços** do cadastro da empresa através de um único endpoint.
 

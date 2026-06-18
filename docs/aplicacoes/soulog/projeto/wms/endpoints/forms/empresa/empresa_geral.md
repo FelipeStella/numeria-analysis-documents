@@ -2,19 +2,17 @@
 title: WMS — Empresa - Aba Geral
 ---
 
-## WMS — Empresa - Aba Geral
-
 > Criação de endpoints para consulta e atualização dos dados gerais da empresa.
 
 ---
 
-### Endpoint
+## Endpoint
 
 ```http
 GET /wms/Empresa/Geral/?clienteId=
 ```
 
-#### Response
+### Response
 
 ```json
 {
@@ -41,15 +39,15 @@ GET /wms/Empresa/Geral/?clienteId=
 }
 ```
 
-#### Objetivo
+### Objetivo
 
 Disponibilizar ao front-end todas as informações exibidas na aba **Geral** do cadastro da empresa através de um único endpoint.
 
 ---
 
-### Endpoint de atualização
+## Endpoint de atualização
 
-#### Nova funcionalidade
+### Nova funcionalidade
 
 Criar um endpoint para atualização dos dados editáveis das informações gerais da empresa.
 
@@ -57,7 +55,7 @@ Criar um endpoint para atualização dos dados editáveis das informações gera
 PUT /wms/Empresa/Geral/Edit/?clienteId=
 ```
 
-#### Payload
+### Payload
 
 ```json
 {
@@ -84,7 +82,7 @@ PUT /wms/Empresa/Geral/Edit/?clienteId=
 }
 ```
 
-#### Objetivo do endpoint de atualização
+### Objetivo do endpoint de atualização
 
 Permitir que o front-end atualize as informações da aba **Geral** da empresa utilizando uma estrutura compatível com o retorno do endpoint de consulta.
 
