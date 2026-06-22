@@ -2,25 +2,23 @@
 title: Eventos de Comarca de Origem
 ---
 
-## Comarca de Origem
-
 > Release 2 · Etapa 4
 
-### Contexto
+## Contexto
 
 Servidores removidos temporariamente podem ter sua comarca de origem definida por um evento específico na carga de dados. Quando esse evento não está presente na carga, a comarca de origem (e o respectivo tempo de serviço na comarca atual) não pode ser calculada corretamente pela regra atual.
 
-### Objetivo
+## Objetivo
 
 Criar uma fonte alternativa de dados (`RheEventoComarcaOrigem`) para suprir a comarca de origem e o início das atividades nos casos em que o evento de origem não está presente na carga, ajustando as regras de negócio que dependem dessa informação.
 
-### Fonte de dados
+## Fonte de dados
 
 Os dados para popular `RheEventoComarcaOrigem` virão da planilha [Comarcas a corrigir SIGEP.xlsx](<./anexos/Comarcas a corrigir SIGEP.xlsx>).
 
-### Estrutura de dados
+## Estrutura de dados
 
-#### Nova tabela: `RheEventoComarcaOrigem`
+### Nova tabela: `RheEventoComarcaOrigem`
 
 | Campo                    | Tipo   | Descrição                                           |
 | ------------------------ | ------ | --------------------------------------------------- |
@@ -44,16 +42,16 @@ Os dados para popular `RheEventoComarcaOrigem` virão da planilha [Comarcas a co
 }
 ```
 
-### Modificações necessárias
+## Modificações necessárias
 
-#### 1. `RheTJService.GetTempoServicoComarcaAtualAsync`
+### 1. `RheTJService.GetTempoServicoComarcaAtualAsync`
 
 Ao calcular o tempo de serviço na comarca atual para eventos de cargo `'CARGO EFETIVO'`, buscar também o registro correspondente em `RheEventoComarcaOrigem` (por `NrFuncional` + `NrVinculo`) e considerar `DtInicioAtividades` como ponto de partida do cálculo quando o evento de origem não estiver presente na carga.
 
-#### 2. `SharedService.GetComarcaOrigemAsync`
+### 2. `SharedService.GetComarcaOrigemAsync`
 
 Quando a comarca de origem não puder ser determinada pelo evento da carga, buscar o valor de `NoComarcaOrigem` em `RheEventoComarcaOrigem` (por `NrFuncional` + `NrVinculo`) como fallback.
 
-### Tempo estimado
+## Tempo estimado
 
 > 3 dias

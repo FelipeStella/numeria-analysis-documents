@@ -4,21 +4,23 @@ layout: home
 nav_order: 1
 ---
 
-# Documentação de Análise
+## Documentação de Análise
 
 Central de documentos de análise de sistemas.
 
+<!-- markdownlint-disable MD033 -->
+
 <div class="grid cards" markdown>
 
--   📦 **Gestão de Movimentações**
+- 📦 **Gestão de Movimentações**
 
     ---
 
-    Eventos de comarca, releases e etapas.
+    Projeto, releases e etapas.
 
     [Ver documentos →](./aplicacoes/gestao-movimentacoes/index.md)
 
--   🚚 **Soulog**
+- 🚚 **Soulog**
 
     ---
 
