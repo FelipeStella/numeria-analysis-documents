@@ -107,8 +107,8 @@ Agilizar o processo de validação do fluxo de remoção.
 
 | Etapa                               | Estimativa  |
 |-------------------------------------|-------------|
-| Novas estruturas                    | 1 dia       |
-| Funcionalidades e rotinas           | 3 dias      |
+| Novas estruturas de dados           | 1 dia       |
+| Funcionalidades do rotinas          | 3 dias      |
 | Query de consulta para o relatório  | 1 dia       |
 | Telas do relatório                  | 3 dias      |
 | **Total**                           | **8 dias**  |

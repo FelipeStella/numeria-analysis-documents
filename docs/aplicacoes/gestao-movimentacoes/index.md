@@ -4,6 +4,12 @@ title: Gestão de Movimentações
 
 Documentação de análise das movimentações processuais, organizada por release e etapa.
 
+## Release 2 - Etapa 5
+
+| Task | Documento                                                                                      | Tempo Estimado |
+| -----| ---------------------------------------------------------------------------------------------- | -------------- |
+| 2777 | [Relatório do fluxo de remoção](./release-2/etapa-5/relatorio_fluxo_remocao.md)                | 8 dias         |
+
 ## Release 2 - Etapa 4
 
 | Task | Documento                                                                                      | Tempo Estimado |
