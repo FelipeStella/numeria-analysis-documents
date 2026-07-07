@@ -10,7 +10,7 @@ Documentação de análise das movimentações processuais, organizada por relea
 | -----| ------------------------------------------------------------------------------------------------------------------------ | -------------- |
 | 2777 | [Relatório do fluxo de remoção](./release-2/etapa-5/relatorio_fluxo_remocao.md)                                          | 8 dias         |
 | 2780 | [Controle de data de corte por comarca - parte 1](./release-2/etapa-5/estrutura-controle-data-corte-comarca-parte-1.md)  | 5 dias         |
-| 2780 | [Controle de data de corte por comarca - parte 2](./release-2/etapa-5/estrutura-controle-data-corte-comarca-parte-1.md)  | 3 dias         |
+| 2780 | [Controle de data de corte por comarca - parte 2](./release-2/etapa-5/estrutura-controle-data-corte-comarca-parte-2.md)  | 3 dias         |
 
 ## Release 2 - Etapa 4
 
